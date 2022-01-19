@@ -5,9 +5,9 @@ function compress(req, res, input) {
   const format = req.params.webp ? 'webp' : 'jpeg'
 
   sharp(input)
-    .grayscale(req.params.grayscale)
+    //.grayscale(req.params.grayscale)
     .toFormat(format, {
-      quality: req.params.quality,
+      quality: 5,
       progressive: true,
       optimizeScans: true
     })
