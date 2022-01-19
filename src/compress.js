@@ -22,7 +22,7 @@ function compress(req, res, input) {
       res.write(output)
       res.end()
     
-      console.log("Original: "req.params.originSize+" | Modified: "+info.size+" | Saved: "+(req.params.originSize - info.size))
+      console.log("Original: "+req.params.originSize+" | Modified: "+info.size+" | Saved: "+(req.params.originSize - info.size))
     })
 }
 
