@@ -21,6 +21,8 @@ function compress(req, res, input) {
       res.status(200)
       res.write(output)
       res.end()
+    
+      console.log("Original: "req.params.originSize+" | Modified: "+info.size+" | Saved: "+(req.params.originSize - info.size))
     })
 }
 
